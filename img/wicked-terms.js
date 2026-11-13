@@ -1,0 +1,1 @@
+window.ID4A_IMG=window.ID4A_IMG||{};window.ID4A_IMG.wicked_terms={};
