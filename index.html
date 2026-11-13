@@ -181,6 +181,109 @@ table.t td:first-child{color:var(--violet);font-weight:500;width:120px}
 .wicked span{font-size:18px;letter-spacing:.06em;padding:14px 30px;border-radius:999px;border:2px solid var(--pink);color:var(--purple);background:#fff}
 .wicked span:nth-child(odd){background:var(--pink);color:#fff}
 
+
+.cards{grid-template-columns:repeat(var(--cols,auto-fill),minmax(0,1fr))}
+.cards:not([style]){grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+@media (max-width:700px){.cards{grid-template-columns:1fr!important}}
+.panel.cont{padding-top:18px;border-top:0}
+.src{font-size:12px;color:var(--violet);margin:-4px 0 14px}
+.src a{color:var(--purple)}
+.h3{font-weight:500;color:var(--purple);font-size:20px;margin:24px 0 8px}
+.bq{margin:8px 0 20px;max-width:80ch;border-left:4px solid var(--pink);padding:2px 0 2px 22px}
+.bq p{margin:0 0 10px;font-size:16px}
+.bq .lead{font-style:italic;font-weight:300;font-size:clamp(19px,2.2vw,25px);line-height:1.4;color:var(--purple)}
+.bq .by{font-size:13px;color:var(--violet);margin-top:4px}
+.grow{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:12px;margin:16px 0 10px}
+.grow figure,.gsingle figure,.gfeat figure,.mosaic figure,.labp figure,.feat figure,.rams figure{margin:0;background:#fff;border-radius:12px;padding:8px;cursor:zoom-in;display:flex;flex-direction:column}
+.grow img{width:100%;height:260px;object-fit:contain}
+.grow.grid3 img{height:200px}
+.grow figcaption,.gsingle figcaption,.gfeat figcaption,.mosaic figcaption,.labp figcaption,.feat figcaption{font-size:12px;color:var(--violet);padding:7px 4px 2px;line-height:1.35}
+.gsingle{margin:16px 0 10px;max-width:560px}
+.gsingle img{width:100%;max-height:420px;object-fit:contain}
+.gfeat{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin:16px 0 10px;align-items:start}
+.gfeat .big img{width:100%;max-height:560px;object-fit:cover;border-radius:6px}
+.gfeat .small img{width:100%;object-fit:cover;border-radius:6px}
+@media (max-width:820px){.grow{grid-template-columns:repeat(2,minmax(0,1fr))}.gfeat{grid-template-columns:1fr}}
+.ypill{display:inline-block;background:var(--yellow);color:var(--purple);font-weight:500;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin:12px 0 4px}
+.arrowtxt{font-weight:500;color:var(--purple);margin:12px 0 0;font-size:16px}
+.arrowtxt span{color:var(--pink);font-size:20px;margin-left:6px}
+.golink{display:inline-block;background:var(--yellow);color:var(--purple);text-decoration:none;font-weight:500;padding:9px 18px;border-radius:999px;margin:6px 0 10px}
+.golink:hover{background:var(--purple);color:#fff}
+.versus{display:grid;grid-template-columns:1fr 70px 1fr;align-items:center;gap:14px;margin:18px 0}
+.vs{display:flex;gap:16px;align-items:center;background:#fff;border-radius:14px;padding:14px}
+.vs.dk{background:var(--purple);color:#fff}
+.vs img{width:120px;height:140px;object-fit:cover;border-radius:8px;cursor:zoom-in;flex-shrink:0}
+.vs h4{margin:0 0 6px;font-weight:500;font-size:17px}
+.vs p{margin:0 0 4px;font-size:14px}
+.vmid{width:70px;height:70px;border-radius:50%;background:var(--yellow);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;letter-spacing:.05em}
+@media (max-width:820px){.versus{grid-template-columns:1fr}.vmid{margin:0 auto}}
+.steps{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;margin:14px 0;align-items:start}
+.steps ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:22px}
+.steps li{background:#fff;border-radius:10px;padding:12px 14px 12px 54px;position:relative;font-size:15px}
+.steps li span{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--purple);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center}
+.steps li:not(:last-child):after{content:"↓";position:absolute;left:21px;bottom:-21px;color:var(--pink);font-size:15px}
+.steps li.last{background:var(--pink);color:#fff;font-weight:500}
+.steps li.last span{background:#fff;color:var(--pink)}
+.steps .gal{margin:0}
+.steps .gal img{height:150px}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+.ramt{color:var(--pink);font-weight:500;font-size:17px;margin:4px 0 12px}
+.rams{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:14px;align-items:stretch}
+.rams img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.rams ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,1fr);grid-auto-flow:column;gap:10px}
+.rams li{background:#fff;border-radius:10px;padding:12px 14px 12px 56px;position:relative;font-size:15px;display:flex;align-items:center}
+.rams li span{position:absolute;left:12px;width:32px;height:32px;background:var(--purple);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center;clip-path:polygon(50% 0%,61% 18%,82% 12%,80% 33%,100% 42%,85% 58%,95% 78%,73% 80%,65% 100%,50% 86%,35% 100%,27% 80%,5% 78%,15% 58%,0% 42%,20% 33%,18% 12%,39% 18%)}
+@media (max-width:820px){.rams{grid-template-columns:1fr}.rams ol{grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none}}
+.feat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:30px;align-items:center;margin:14px 0}
+.ftext{font-size:clamp(22px,2.6vw,32px);line-height:1.3;color:var(--purple);border-left:4px solid var(--pink);padding-left:22px;margin:0}
+.feat img{width:100%;max-height:520px;object-fit:cover;border-radius:6px}
+@media (max-width:820px){.feat{grid-template-columns:1fr}}
+.scale .grow img{height:190px;object-fit:cover;border-radius:6px}
+.axis{display:flex;align-items:center;gap:10px;margin:6px 0 16px}
+.axis i{flex:1;height:2px;background:var(--purple)}
+.axis span{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:999px;color:#fff}
+.axis .a{background:var(--purple)}.axis .b{background:var(--pink)}
+.tl{background:#fff;border-radius:14px;padding:20px 22px 14px;margin:14px 0;max-width:760px}
+.tlg{display:grid;grid-template-columns:150px 1fr;row-gap:10px;align-items:center}
+.tln b{display:block;font-weight:500;color:var(--purple);font-size:14px;line-height:1.1}
+.tln small{color:var(--violet);font-size:11px}
+.tlt{position:relative;height:22px;border-left:1px solid var(--lav2)}
+.tlt .dot{position:absolute;top:4px;width:14px;height:14px;border-radius:50%;transform:translateX(-7px)}
+.tlt .bar{position:absolute;top:5px;height:12px;border-radius:9px}
+.tlt em{position:absolute;top:2px;font-style:normal;font-size:11px;white-space:nowrap}
+.tlx{position:relative;height:18px}
+.tlx span{position:absolute;transform:translateX(-50%);font-size:11px;color:var(--violet)}
+.tll{display:flex;gap:16px;font-size:11px;color:var(--violet);margin-top:8px}
+.tll i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.cmp{display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr);gap:10px;max-width:760px;margin:14px 0;align-items:stretch}
+.ch{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--violet)}
+.ch:last-child{color:var(--pink)}
+.cl{background:var(--purple);color:#fff;border-radius:10px;padding:14px 16px;font-size:15px}
+.cl.empty{background:transparent}
+.cr{background:#fff;border-radius:10px;padding:14px 16px;font-size:15px;font-weight:500;color:var(--purple)}
+.car{display:flex;align-items:center;justify-content:center;color:var(--purple);font-weight:600}
+.car:not(:empty){background:var(--yellow);border-radius:50%;width:32px;height:32px;align-self:center;justify-self:center}
+.mosaic-h h3{font-weight:500;color:var(--purple);font-size:28px;margin:4px 0 0}
+.mosaic-h div{color:var(--pink);font-size:15px;margin-bottom:12px}
+.mosaic{display:grid;grid-template-columns:1fr 1.5fr 2fr;grid-template-rows:240px 240px;gap:12px}
+.mosaic figure{padding:0;overflow:hidden}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic .m0{grid-column:1;grid-row:1/3}.mosaic .m1{grid-column:2;grid-row:1/3}.mosaic .m2{grid-column:3;grid-row:1}.mosaic .m3{grid-column:3;grid-row:2}
+@media (max-width:820px){.mosaic{grid-template-columns:1fr 1fr;grid-template-rows:260px 160px 160px}.mosaic .m0{grid-column:1;grid-row:1}.mosaic .m1{grid-column:2;grid-row:1}.mosaic .m2{grid-column:1/3;grid-row:2}.mosaic .m3{grid-column:1/3;grid-row:3}}
+.lab{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}
+.labc{background:#fff;border-radius:12px;padding:12px;text-align:center;display:flex;flex-direction:column;gap:6px}
+.labt{display:block;background:var(--purple);color:#fff;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:5px 10px}
+.labt.hl{background:var(--pink)}
+.labc small{color:var(--violet);font-size:12px;min-height:16px}
+.labp{display:flex;gap:6px;justify-content:center;flex:1;align-items:flex-end}
+.labp figure{padding:2px;flex:1}
+.labp img{width:100%;height:170px;object-fit:contain}
+@media (max-width:820px){.lab{grid-template-columns:1fr 1fr}}
+.tw{overflow-x:auto}
+#totop{position:fixed;right:22px;bottom:22px;z-index:30;width:48px;height:48px;border-radius:50%;border:0;background:var(--purple);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 8px 20px rgba(16,44,83,.25);opacity:0;pointer-events:none;transition:opacity .2s}
+#totop.on{opacity:1;pointer-events:auto}
+#totop:hover{background:var(--pink)}
+
 /* lightbox */
 #lb{position:fixed;inset:0;background:rgba(16,44,83,.92);z-index:60;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:30px}
 #lb img{max-width:92vw;max-height:80vh;border-radius:8px;background:#fff}
@@ -239,11 +342,12 @@ footer a{color:#fff}
   <main id="view"></main>
   <footer><div class="wrap">
     <span>ID4A · First Level Specializing Master in Industrial Design for Architecture · POLI.design</span>
-    <span>Content: Silvia Ferraris · Slides: Martina Labarta · 2026</span>
+    <span>Silvia Ferraris · Martina Labarta</span>
   </div></footer>
 </div>
 
 <div id="peek"><div class="card"><img alt=""><div class="cap"></div></div><svg class="star"><use href="#burst"/></svg></div>
+<button id="totop" aria-label="Back to top">↑</button>
 <div id="lb" class="hidden"><button class="x" aria-label="Close">×</button><button class="pv" aria-label="Previous">‹</button><img alt=""><div class="cap"></div><button class="nx" aria-label="Next">›</button></div>
 
 <script>
@@ -348,7 +452,7 @@ function bindPeek(root){
   });
 }
 function capFor(h){
-  for(const s of SEC) for(const sl of s.slides) for(const p of sl.pics) if(p.id===h) return p.cap||'';
+  for(const s of SEC) for(const p of s.panels) for(const b of p.blocks) for(const x of (b.pics||[])) if(x.id===h) return x.cap||'';
   return '';
 }
 
@@ -363,7 +467,7 @@ function home(mode){
       <div class="brand">POLI.DESIGN<small>FOUNDED BY POLITECNICO DI MILANO</small></div>
       <h1>Design Styles and Movements</h1>
       <p class="lead">Past references</p>
-      <div class="cred"><b>Silvia Ferraris</b> content · <b>Martina Labarta</b> slides · ID4A 2026</div>
+      <div class="cred"><b>Silvia Ferraris</b> · <b>Martina Labarta</b> · ID4A</div>
     </div>
   </section>
   <div class="wrap">
@@ -424,77 +528,86 @@ function openSection(i,anchor){
 function section(i,anchor){
   const s=SEC[i]; const v=$('#view');
   $('#crumb').innerHTML=`<span>${s.num==='·'?'':s.num+' ·'}</span><b>${esc(s.title)}</b>`;
-  const tabs=[]; const seen=new Set();
-  s.slides.forEach(sl=>{ if(sl.tab&&!seen.has(sl.tab)){seen.add(sl.tab);tabs.push([sl.tab,'s'+sl.n])} });
-  const subs=s.subs.map(u=>[u.title,u.id]);
   LB=[];
+  const tabs=[], seen=new Set();
+  s.panels.forEach((p,k)=>{ p._id=p.anchor||('p'+k); if(p.tag&&!seen.has(p.tag)){seen.add(p.tag);tabs.push([p.tag,p._id])} });
+  const nav=[...s.subs.map(u=>[u.title,u.id]), ...tabs.filter(t=>!s.subs.length||t[0]==='References')];
   let h=`<section class="shero">${stripes()}<div class="wrap">
     <div><div class="num">${s.num==='·'?'':s.num}</div><h1>${esc(s.title)}</h1><div class="yrs">${esc(s.years||'')}</div></div>
     ${s.hover?`<div class="pic"><img src="${img(s.hover)}" alt="">${burst()}</div>`:''}
   </div></section>
-  <div class="wrap">
-    <nav class="tabs">${(subs.length?subs:tabs).map(([l,id])=>`<a class="pill" href="#${id}" data-jump="${id}">${esc(l)}</a>`).join('')}${subs.length&&tabs.find(t=>t[0]==='References')?`<a class="pill" data-jump="${tabs.find(t=>t[0]==='References')[1]}" href="#">References</a>`:''}</nav>`;
-  let lastTitle=s.title;
-  s.slides.forEach(sl=>{
-    const id=sl.anchor||('s'+sl.n);
-    const t=sl.title; const showT=t && norm(t)!==norm(s.title) && norm(t)!==norm(lastTitle) && !sl.refs;
-    if(t) lastTitle=t;
-    h+=`<article class="panel" id="${id}" ${sl.anchor?`data-alt="s${sl.n}"`:''}>`;
-    h+=`<div class="kick">${sl.tab?`<span class="tg">${esc(sl.tab)}</span>`:''}</div>`;
-    if(showT){ const parts=t.split(' | '); h+=`<h2>${esc(parts[0])}</h2>${parts[1]?`<div class="psub">${esc(parts[1])}</div>`:''}`; }
-    if(sl.refs) h+=refsHTML(sl); else h+=bodyHTML(sl);
+  <div class="wrap"><nav class="tabs">${nav.map(([l,id])=>`<a class="pill" href="#${id}" data-jump="${id}">${esc(l)}</a>`).join('')}</nav>`;
+  let prevTag=null;
+  s.panels.forEach(p=>{
+    const showTag=p.tag && p.tag!==prevTag; prevTag=p.tag||prevTag;
+    h+=`<article class="panel ${showTag||p.title?'':'cont'}" id="${p._id}">`;
+    if(showTag) h+=`<div class="kick"><span class="tg">${esc(p.tag)}</span></div>`;
+    if(p.title && p.title.toLowerCase()!==(p.tag||'').toLowerCase()){ const parts=p.title.split(' | '); h+=`<h2>${esc(parts[0])}</h2>${parts[1]?`<div class="psub">${esc(parts[1])}</div>`:''}`; }
+    h+=p.blocks.map(blockHTML).join('');
     h+=`</article>`;
   });
   const pv=SEC[i-1], nx=SEC[i+1];
   h+=`<div class="pager">${pv?`<a href="#${pv.id}"><small>‹ Previous</small>${esc(pv.title)}</a>`:'<span style="flex:1"></span>'}${nx?`<a class="nx" href="#${nx.id}"><small>Next ›</small>${esc(nx.title)}</a>`:'<span style="flex:1"></span>'}</div></div>`;
   v.innerHTML=h;
-  v.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault(); const el=document.getElementById(a.dataset.jump)||v.querySelector(`[data-alt="${a.dataset.jump}"]`); el&&el.scrollIntoView({behavior:'smooth'});}));
+  v.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault(); const el=document.getElementById(a.dataset.jump); el&&el.scrollIntoView({behavior:'smooth'});}));
   v.querySelectorAll('[data-lb]').forEach(f=>f.addEventListener('click',e=>{ if(e.target.closest('a')) return; openLB(+f.dataset.lb)}));
   if(anchor){ requestAnimationFrame(()=>{const el=document.getElementById(anchor); el&&el.scrollIntoView();}); } else window.scrollTo(0,0);
 }
 function norm(t){return (t||'').toLowerCase().split('|')[0].replace(/[^a-z]/g,'')}
 function paraHTML(p){
   const plain=strip(p);
-  if(/^<mark>[^<]*<\/mark>$/.test(p) && plain.length<60) return `<h4>${plain}</h4>`;
+  if(/^<mark>[^<]*<\/mark>$/.test(p) && plain.length<70) return `<h4>${plain}</h4>`;
   if(/^[A-Z’' ()-]{3,40}$/.test(plain) && plain===plain.toUpperCase()) return `<div class="label">${p}</div>`;
-  if(/^[“"«]/.test(plain) && plain.length>60) return `<p class="quote">${p}</p>`;
   return `<p>${p}</p>`;
 }
-function bodyHTML(sl){
-  let h='<div class="prose" style="max-width:none">'; let cards=[];
-  const flush=()=>{ if(cards.length){ h+=`<div class="cards">${cards.join('')}</div>`; cards=[]; } };
-  sl.blocks.forEach(b=>{
-    if(b.k==='card'||b.k==='dark'||b.k==='pink'){
-      if(b.p.length===1 && /^<mark>[^<]*<\/mark>$/.test(b.p[0])){ flush(); h+=`<h4>${strip(b.p[0])}</h4>`; return; }
-      cards.push(`<div class="c ${b.k==='dark'?'dk':b.k==='pink'?'pk':''} ${strip(b.p.join(' ')).length>200?'wide':''}">${b.p.map(p=>`<p>${p}</p>`).join('')}</div>`); return;
-    }
-    flush();
-    if(b.k==='question'){ h+=`<div class="qn">${b.p.map(p=>`<p>${p}</p>`).join('')}</div>`; return; }
-    if(b.k==='table'){ const r=b.rows; h+=`<table class="t"><tr>${r[0].map(c=>`<th>${esc(c)}</th>`).join('')}</tr>${r.slice(1).map(row=>`<tr>${row.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table>`; return; }
-    h+=`<div style="max-width:78ch">${b.p.map(paraHTML).join('')}</div>`;
-  });
-  flush(); h+='</div>';
-  if(norm(sl.title)==='wickedterms'){ h=`<div class="wicked">${sl.blocks.flatMap(b=>b.p).filter(p=>strip(p)!=='Wicked terms').map(p=>`<span>${p}</span>`).join('')}</div>`; }
-  if(sl.diagram){ const k=LB.length; LB.push({h:sl.diagram,cap:strip(sl.title)}); h+=`<div class="diag" data-lb="${k}"><img loading="lazy" src="${img(sl.diagram)}" alt="Diagram: ${esc(strip(sl.title))}"></div>`; }
-  if(sl.pics.length){
-    h+='<div class="gal">';
-    sl.pics.forEach(p=>{ const m=DATA.images[p.id]||{w:4,h:3}; const ar=m.w/m.h; const k=LB.length; LB.push({h:p.id,cap:p.cap});
-      h+=`<figure data-lb="${k}" style="flex-basis:${Math.round(220*Math.min(Math.max(ar,.55),2.2))}px"><img loading="lazy" src="${img(p.id)}" alt="${esc(strip(p.cap))}">${p.cap?`<figcaption>${p.cap}</figcaption>`:''}</figure>`; });
-    h+='</div>';
+function lbAdd(id,cap){ const k=LB.length; LB.push({h:id,cap:cap||''}); return k; }
+function fig(p,cls){ const k=lbAdd(p.id,p.cap); return `<figure class="${cls||''}" data-lb="${k}"><img loading="lazy" src="${img(p.id)}" alt="${esc(strip(p.cap||''))}">${p.cap?`<figcaption>${p.cap}</figcaption>`:''}</figure>`; }
+function hostOf(u){ try{ return new URL(u).host.replace(/^www\./,'') }catch(e){ return u } }
+function blockHTML(b){
+  switch(b.t){
+  case 'text': return `<div class="prose">${b.p.map(paraHTML).join('')}</div>`;
+  case 'cards': { const n=b.items.length, cols=n<=4?n:0;
+    return `<div class="cards" ${cols?`style="--cols:${cols}"`:''}>${b.items.map((it,k)=>`<div class="c ${b.v[k]==='dark'?'dk':b.v[k]==='pink'?'pk':''}">${it}</div>`).join('')}</div>`; }
+  case 'q': return `<div class="qn">${b.p.map(p=>`<p>${p}</p>`).join('')}</div>`;
+  case 'src': return `<div class="src">Source: <a href="${esc(b.url)}" target="_blank" rel="noopener">${b.label?esc(b.label)+' · ':''}${esc(hostOf(b.url))}</a></div>`;
+  case 'ref': return `<div class="src">Reference: ${b.text}</div>`;
+  case 'quote': return `<blockquote class="bq"><p class="lead">“${b.lead}${b.rest&&b.rest.length?'':'”'}</p>${(b.rest||[]).map((r,k,a)=>`<p>${r.replace(/^“/,'')}${k===a.length-1?(/”\s*$/.test(strip(r))?'':'”'):''}</p>`).join('')}${b.by?`<div class="by">— ${b.by}</div>`:''}${b.src?`<div class="src">Source: <a href="${esc(b.src)}" target="_blank" rel="noopener">${esc(hostOf(b.src))}</a></div>`:''}</blockquote>`;
+  case 'gal': {
+    const L=b.layout||'';
+    if(L==='row'||L==='grid3') return `<div class="grow ${L}" style="--n:${L==='grid3'?3:b.pics.length}">${b.pics.map(p=>fig(p)).join('')}</div>`;
+    if(L==='single') return `<div class="gsingle">${b.pics.map(p=>fig(p)).join('')}</div>`;
+    if(L==='feature') return `<div class="gfeat">${b.pics.map((p,k)=>fig(p,k===0?'big':'small')).join('')}</div>`;
+    let h='<div class="gal">';
+    b.pics.forEach(p=>{ const m=DATA.images[p.id]||{w:4,h:3}; const ar=m.w/m.h; const k=lbAdd(p.id,p.cap);
+      h+=`<figure data-lb="${k}" style="flex-basis:${Math.round(220*Math.min(Math.max(ar,.55),2.2))}px"><img loading="lazy" src="${img(p.id)}" alt="${esc(strip(p.cap||''))}">${p.cap?`<figcaption>${p.cap}</figcaption>`:''}</figure>`; });
+    return h+'</div>'; }
+  case 'diag': { const k=lbAdd(b.id,''); return `<div class="diag" data-lb="${k}"><img loading="lazy" src="${img(b.id)}" alt="Diagram"></div>`; }
+  case 'table': { const r=b.rows; return `<div class="tw"><table class="t"><tr>${r[0].map(c=>`<th>${esc(c)}</th>`).join('')}</tr>${r.slice(1).map(row=>`<tr>${row.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`; }
+  case 'refs': return `<div class="refs">${b.groups.map(([t,items])=>t==='Museums and collections'?`<h4>${t}</h4><div class="chips">${items.map(i=>`<span>${i}</span>`).join('')}</div>`:`<h4>${t}</h4><ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul>`).join('')}</div>`;
+  case 'pill': return `<div class="ypill">${esc(b.text)}</div>`;
+  case 'arrow': return `<div class="arrowtxt">${esc(b.text)} <span>→</span></div>`;
+  case 'link': return `<a class="golink" href="${b.href}">${esc(b.text)}</a>`;
+  case 'h3': return `<h3 class="h3">${esc(b.text)}</h3>`;
+  case 'versus': { const side=(x,dk)=>{const k=lbAdd(x.img,x.title); return `<div class="vs ${dk?'dk':''}"><img data-lb="${k}" src="${img(x.img)}" alt=""><div><h4>${esc(x.title)}</h4>${x.p.map(t=>`<p>${esc(t)}</p>`).join('')}</div></div>`};
+    return `<div class="versus">${side(b.left,true)}<div class="vmid">${esc(b.mid)}</div>${side(b.right,false)}</div>`; }
+  case 'steps': return `<div class="steps"><ol>${b.items.map((t,k,a)=>`<li class="${k===a.length-1?'last':''}"><span>${k+1}</span>${esc(t)}</li>`).join('')}</ol><div class="gal">${b.pics.map(p=>{const m=DATA.images[p.id]||{w:4,h:3};const k=lbAdd(p.id,'');return `<figure data-lb="${k}" style="flex-basis:${Math.round(160*Math.min(Math.max(m.w/m.h,.55),2.2))}px"><img loading="lazy" src="${img(p.id)}" alt=""></figure>`}).join('')}</div></div>`;
+  case 'rams': { const k=lbAdd(b.img,'Dieter Rams'); return `<h4 class="ramt">${esc(b.title)}</h4><div class="rams"><figure data-lb="${k}"><img src="${img(b.img)}" alt="Dieter Rams"></figure><ol>${b.items.map((t,i)=>`<li><span>${i+1}</span>${esc(t)}</li>`).join('')}</ol></div>`; }
+  case 'feature': { const k=lbAdd(b.img,b.cap); return `<div class="feat"><p class="ftext">${esc(b.text)}</p><figure data-lb="${k}"><img src="${img(b.img)}" alt=""><figcaption>${esc(b.cap)}</figcaption></figure></div>`; }
+  case 'scale': return `<div class="scale"><div class="grow" style="--n:${b.pics.length}">${b.pics.map(p=>fig(p)).join('')}</div><div class="axis"><span class="a">${esc(b.from)}</span><i></i><span class="b">${esc(b.to)}</span></div></div>`;
+  case 'timeline': { const span=b.to-b.from, X=y=>((y-b.from)/span*100).toFixed(2)+'%'; const col={Florence:'#2E9BB5',Milan:'#F24495',Turin:'#432E8C'};
+    let h=`<div class="tl"><div class="tlg">`;
+    b.items.forEach(([n,c,a,z])=>{ const dot=a===z; h+=`<div class="tln"><b>${esc(n)}</b><small>${esc(c)}</small></div><div class="tlt"><span class="${dot?'dot':'bar'}" style="left:${X(a)};${dot?'':`width:calc(${X(z)} - ${X(a)})`};background:${col[c]}"></span><em style="left:calc(${X(z)} + 14px);color:${col[c]}">${a===z?a:a+'–'+z}</em></div>`; });
+    h+=`<div></div><div class="tlx">${[1960,1970,1980].map(y=>`<span style="left:${X(y)}">${y}s</span>`).join('')}</div></div>`;
+    h+=`<div class="tll">${Object.entries(col).map(([c,v])=>`<span><i style="background:${v}"></i>${c}</span>`).join('')}</div></div>`; return h; }
+  case 'compare': return `<div class="cmp"><div class="ch">${esc(b.left)}</div><div></div><div class="ch">${esc(b.right)}</div>${b.rows.map(([l,r])=>`<div class="cl ${l?'':'empty'}">${esc(l)}</div><div class="car">${l||r?'→':''}</div><div class="cr">${esc(r)}</div>`).join('')}</div>`;
+  case 'mosaic': return `<div class="mosaic-h"><h3>${esc(b.title)}</h3><div>${esc(b.sub)}</div></div><div class="mosaic">${b.pics.map((p,k)=>fig(p,'m'+k)).join('')}</div>`;
+  case 'labelled': return `<div class="lab">${b.items.map(it=>`<div class="labc"><span class="labt ${it.hl?'hl':''}">${esc(it.tag)}</span><small>${esc(it.sub||'')}</small><div class="labp">${it.pics.map(p=>fig(p)).join('')}</div></div>`).join('')}</div>`;
   }
-  return h;
-}
-function refsHTML(sl){
-  let h='<div class="refs">', cur=null, items=[];
-  const out=()=>{ if(!cur) return; if(cur==='Museums and collections') h+=`<h4>${cur}</h4><div class="chips">${items.map(i=>`<span>${i}</span>`).join('')}</div>`; else h+=`<h4>${cur}</h4><ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul>`; items=[]; };
-  sl.blocks.forEach(b=>b.p.forEach(p=>{ const t=strip(p).trim();
-    if(['Books','Museums and collections','Online sources'].includes(t)){ out(); cur=t; return; }
-    if(!cur) return; items.push(p);
-  }));
-  out(); return h+'</div>';
+  return '';
 }
 
 /* ---------- lightbox ---------- */
+const tt=$('#totop'); window.addEventListener('scroll',()=>tt.classList.toggle('on',scrollY>700),{passive:true}); tt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
 const lb=$('#lb');
 function openLB(i){ LBi=i; showLB(); lb.classList.remove('hidden'); }
 function showLB(){ const it=LB[LBi]; lb.querySelector('img').src=img(it.h); lb.querySelector('.cap').innerHTML=it.cap||''; }
